@@ -41,27 +41,21 @@ export function CTASection() {
                 className="flex-1 px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                 required
               />
-              <Button type="submit" variant="hero" size="lg" className="whitespace-nowrap">
-                Start Free Trial
+              <Button 
+                type="button" 
+                variant="hero" 
+                size="lg" 
+                className="whitespace-nowrap"
+                onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Contact Sales
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
-            <p className="text-sm text-muted-foreground mt-2">
-              No credit card required • 14-day free trial • Setup in 2 minutes
-            </p>
           </form>
 
           {/* Trust Indicators */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            <div className="flex items-center justify-center space-x-3">
-              <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
-                <Users className="w-6 h-6 text-accent" />
-              </div>
-              <div className="text-left">
-                <div className="font-semibold">10,000+</div>
-                <div className="text-sm text-muted-foreground">Active Businesses</div>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
             <div className="flex items-center justify-center space-x-3">
               <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
                 <TrendingUp className="w-6 h-6 text-accent" />
@@ -112,7 +106,12 @@ export function CTASection() {
             <p className="text-muted-foreground mb-6">
               Custom implementation, dedicated support, and enterprise-grade security for large organizations.
             </p>
-            <Button variant="social" size="lg" className="w-full">
+            <Button 
+              variant="social" 
+              size="lg" 
+              className="w-full"
+              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Contact Sales Team
             </Button>
             <div className="mt-4 flex items-center justify-center space-x-4 text-sm text-muted-foreground">
@@ -128,15 +127,6 @@ export function CTASection() {
           </div>
         </div>
 
-        {/* Final Trust Signal */}
-        <div className="text-center mt-16">
-          <div className="inline-flex items-center px-6 py-3 bg-accent/10 border border-accent/20 rounded-full">
-            <CheckCircle className="w-5 h-5 text-accent mr-2" />
-            <span className="text-sm font-medium">
-              Risk-free trial • Cancel anytime • No setup fees
-            </span>
-          </div>
-        </div>
       </div>
     </section>
   )

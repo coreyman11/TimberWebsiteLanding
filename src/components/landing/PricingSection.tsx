@@ -18,7 +18,7 @@ const plans = [
       "Limited to 1,000 transactions/month",
       "Basic reports only"
     ],
-    cta: "Start Free Trial",
+    cta: "Contact Sales",
     popular: false
   },
   {
@@ -37,7 +37,7 @@ const plans = [
       "API access"
     ],
     limitations: [],
-    cta: "Start Free Trial",
+    cta: "Contact Sales",
     popular: true
   },
   {
@@ -129,6 +129,7 @@ export function PricingSection() {
                   variant={plan.popular ? "hero" : "outline"} 
                   size="lg" 
                   className="w-full"
+                  onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   {plan.cta}
                 </Button>
@@ -215,12 +216,13 @@ export function PricingSection() {
             Join thousands of businesses already streamlining operations with Timber POS
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="hero" size="lg">
-              Start Your Free Trial
+            <Button 
+              variant="hero" 
+              size="lg"
+              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Contact Sales
             </Button>
-            <span className="text-sm text-muted-foreground">
-              No credit card required • Setup in 2 minutes
-            </span>
           </div>
         </div>
       </div>
