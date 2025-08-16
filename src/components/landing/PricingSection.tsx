@@ -5,18 +5,18 @@ const plans = [
   {
     name: "Starter",
     price: 29,
-    description: "Perfect for small teams getting started with automation",
+    description: "Perfect for small businesses getting started with POS",
     features: [
-      "Up to 5 team members",
-      "10 automated workflows",
-      "Basic analytics dashboard",
+      "Up to 3 terminals",
+      "Basic inventory tracking",
+      "Sales reporting",
       "Email support",
-      "Mobile app access",
-      "Core integrations"
+      "Mobile POS app",
+      "Standard payment processing"
     ],
     limitations: [
-      "Limited to 1,000 tasks/month",
-      "Basic reporting only"
+      "Limited to 1,000 transactions/month",
+      "Basic reports only"
     ],
     cta: "Start Free Trial",
     popular: false
@@ -24,16 +24,16 @@ const plans = [
   {
     name: "Professional",
     price: 79,
-    description: "Ideal for growing teams that need advanced features and priority support",
+    description: "Ideal for growing businesses that need advanced POS features",
     features: [
-      "Up to 25 team members",
-      "Unlimited automated workflows",
-      "Advanced analytics & insights",
+      "Up to 10 terminals",
+      "Advanced inventory management",
+      "Customer loyalty programs",
       "Priority support",
-      "Mobile app access",
-      "All integrations",
-      "Custom workflow templates",
-      "Advanced security features",
+      "Mobile POS & tablet support",
+      "All payment integrations",
+      "Custom reporting templates",
+      "Staff management tools",
       "API access"
     ],
     limitations: [],
@@ -43,15 +43,15 @@ const plans = [
   {
     name: "Enterprise",
     price: null,
-    description: "Custom solutions for large organizations with specific requirements",
+    description: "Custom solutions for enterprise retail chains and franchises",
     features: [
-      "Unlimited team members",
-      "Custom workflow development",
+      "Unlimited terminals",
+      "Custom POS development",
       "Enterprise analytics suite",
       "24/7 dedicated support",
       "All platform features",
       "Custom integrations",
-      "SSO & advanced security",
+      "Multi-location management",
       "SLA guarantees",
       "Dedicated success manager",
       "On-premise deployment options"
@@ -69,10 +69,11 @@ export function PricingSection() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
-            Simple, Transparent Pricing
+            Simple, Transparent 
+            <span className="text-gradient"> Pricing</span>
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Choose the perfect plan for your team. All plans include a 14-day free trial with no credit card required.
+            Choose the perfect plan for your business size and needs. All plans include a 14-day free trial with no credit card required.
           </p>
           
           {/* Pricing Toggle */}
@@ -208,10 +209,10 @@ export function PricingSection() {
         <div className="text-center mt-16 p-8 bg-card border border-border rounded-2xl">
           <div className="flex items-center justify-center mb-4">
             <Zap className="w-8 h-8 text-primary mr-2" />
-            <h3 className="text-2xl font-bold">Ready to Transform Your Workflow?</h3>
+            <h3 className="text-2xl font-bold">Ready to Transform Your Business?</h3>
           </div>
           <p className="text-muted-foreground mb-6">
-            Join thousands of teams already boosting their productivity with CloudFlow
+            Join thousands of businesses already streamlining operations with Timber POS
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button variant="hero" size="lg">

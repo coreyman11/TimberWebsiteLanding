@@ -3,37 +3,37 @@ import { Star } from "lucide-react"
 const testimonials = [
   {
     name: "Sarah Chen",
-    role: "VP of Operations",
-    company: "TechFlow Inc.",
+    role: "Store Manager",
+    company: "Urban Retail Co.",
     avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b5c1?w=64&h=64&fit=crop&crop=face",
-    content: "CloudFlow reduced our manual processes by 80%. The ROI was evident within the first month. Our team can now focus on strategic initiatives instead of repetitive tasks.",
+    content: "Timber POS reduced our checkout times by 67%. The integrated inventory management has eliminated stockouts completely. Our customers love the seamless payment experience.",
     rating: 5
   },
   {
     name: "Marcus Rodriguez",
-    role: "CTO",
-    company: "Innovation Labs",
+    role: "Restaurant Owner",
+    company: "Bistro Verde",
     avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=64&h=64&fit=crop&crop=face",
-    content: "The AI automation capabilities are game-changing. We've seen a 300% increase in productivity while maintaining 99.9% accuracy. Best investment we've made this year.",
+    content: "The speed is incredible - 3-second transactions even during peak hours. Real-time inventory tracking has revolutionized our kitchen operations. Best investment we've made.",
     rating: 5
   },
   {
     name: "Emily Watson",
-    role: "Head of Operations",
-    company: "ScaleUp Dynamics",
+    role: "Salon Owner",
+    company: "Luxe Beauty Studio",
     avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=64&h=64&fit=crop&crop=face",
-    content: "Implementation was seamless. The platform integrates perfectly with our existing tools. Customer support is exceptional - they truly care about our success.",
+    content: "Implementation was effortless. The appointment booking integrates perfectly with payments. Our staff loves how intuitive it is and customers appreciate the contactless options.",
     rating: 5
   }
 ]
 
 const companies = [
-  { name: "TechFlow", logo: "TF" },
-  { name: "Innovation Labs", logo: "IL" },
-  { name: "ScaleUp", logo: "SU" },
-  { name: "DataCore", logo: "DC" },
-  { name: "FlowTech", logo: "FT" },
-  { name: "AutoCorp", logo: "AC" }
+  { name: "Urban Retail", logo: "UR" },
+  { name: "Bistro Verde", logo: "BV" },
+  { name: "Luxe Beauty", logo: "LB" },
+  { name: "FastMart", logo: "FM" },
+  { name: "Café Central", logo: "CC" },
+  { name: "StyleCut", logo: "SC" }
 ]
 
 export function SocialProofSection() {
@@ -46,7 +46,7 @@ export function SocialProofSection() {
             Trusted by Industry Leaders
           </h2>
           <p className="text-xl text-muted-foreground mb-12">
-            Join thousands of companies already transforming their workflows
+            Join thousands of businesses already streamlining their operations
           </p>
           
           {/* Company Logos */}

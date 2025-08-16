@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/enhanced-button"
 import { ArrowRight, Play } from "lucide-react"
-import heroImage from "@/assets/hero-dashboard.jpg"
+import heroImage from "@/assets/timber-hero-dashboard.png"
 
 export function HeroSection() {
   return (
@@ -23,37 +23,37 @@ export function HeroSection() {
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-subtle border border-border mb-8">
               <div className="w-2 h-2 bg-accent rounded-full mr-2" />
               <span className="text-sm font-medium text-muted-foreground">
-                Trusted by 50,000+ teams worldwide
+                Trusted by 10,000+ businesses worldwide
               </span>
             </div>
 
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-              Transform Your
-              <span className="text-gradient"> Workflow</span> 
+              Supercharge Your
+              <span className="text-gradient"> POS</span> 
               <br />
-              With AI-Powered
-              <span className="text-gradient"> Automation</span>
+              One Platform That Replaces
+              <span className="text-gradient"> All Your Business Software</span>
             </h1>
 
             {/* Subheading */}
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
-              Stop wasting time on repetitive tasks. CloudFlow's intelligent automation platform helps teams boost productivity by 300% while reducing manual errors and operational costs.
+              Experience unified business management. From customer relationships to inventory control, everything works together seamlessly. Lightning-fast POS, smart analytics, and automated operations.
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 mb-8 text-center lg:text-left">
               <div>
-                <div className="text-2xl font-bold text-primary">300%</div>
-                <div className="text-sm text-muted-foreground">Productivity Boost</div>
+                <div className="text-2xl font-bold text-primary">67%</div>
+                <div className="text-sm text-muted-foreground">Faster Service</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-primary">50k+</div>
-                <div className="text-sm text-muted-foreground">Active Teams</div>
+                <div className="text-2xl font-bold text-primary">10k+</div>
+                <div className="text-sm text-muted-foreground">Active Businesses</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-primary">99.9%</div>
-                <div className="text-sm text-muted-foreground">Uptime SLA</div>
+                <div className="text-2xl font-bold text-primary">3s</div>
+                <div className="text-sm text-muted-foreground">Transaction Speed</div>
               </div>
             </div>
 
@@ -88,7 +88,7 @@ export function HeroSection() {
             <div className="relative">
               <img 
                 src={heroImage} 
-                alt="CloudFlow Dashboard Interface" 
+                alt="Timber POS Dashboard Interface" 
                 className="w-full h-auto rounded-2xl shadow-2xl border border-border"
               />
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-primary/20 to-secondary/20" />

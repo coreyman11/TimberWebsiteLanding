@@ -7,48 +7,48 @@ import analyticsIcon from "@/assets/icon-analytics.jpg"
 const features = [
   {
     icon: collaborationIcon,
-    title: "Smart Team Collaboration",
-    description: "Seamlessly connect your entire team with real-time collaboration tools that adapt to your workflow. Share insights, track progress, and make decisions faster than ever.",
+    title: "Smart Customer Management",
+    description: "Transform every interaction into insights. Track customer behavior, predict preferences, and deliver personalized experiences that drive loyalty.",
     benefits: [
-      "Real-time document collaboration",
-      "Intelligent task assignment",
-      "Cross-team communication hub",
-      "Mobile-first design"
+      "67% faster customer service resolution",
+      "Automated loyalty program management",
+      "Real-time customer journey tracking",
+      "2.3x increase in customer retention"
     ]
   },
   {
     icon: automationIcon,
-    title: "AI-Powered Automation",
-    description: "Let our advanced AI handle repetitive tasks while you focus on what matters. Our machine learning algorithms continuously optimize your processes for maximum efficiency.",
+    title: "Intelligent Inventory",
+    description: "Never run out of stock or overorder again. AI-powered forecasting and automated reordering keep your inventory optimized 24/7.",
     benefits: [
-      "Zero-code workflow builder",
-      "Smart process optimization",
-      "Predictive task scheduling",
-      "Custom automation templates"
+      "Predictive stock level alerts",
+      "Supplier performance analytics",
+      "Automated purchase order generation",
+      "45% reduction in stockouts"
     ]
   },
   {
     icon: analyticsIcon,
-    title: "Advanced Analytics & Insights",
-    description: "Turn your data into actionable insights with comprehensive analytics dashboards. Track performance, identify bottlenecks, and make data-driven decisions with confidence.",
+    title: "Lightning-Fast POS",
+    description: "Process transactions in seconds with our intuitive interface. Accept any payment method and watch your checkout lines disappear.",
     benefits: [
-      "Real-time performance metrics",
-      "Customizable reporting",
-      "Predictive analytics",
-      "ROI tracking & optimization"
+      "Sub-3 second transaction processing",
+      "Apple Pay, Google Pay & contactless",
+      "Real-time payment failure recovery",
+      "89% checkout completion rate"
     ]
   }
 ]
 
 const comparisonFeatures = [
-  { feature: "AI-Powered Automation", cloudflow: true, competitor1: false, competitor2: true },
-  { feature: "Real-time Collaboration", cloudflow: true, competitor1: true, competitor2: false },
-  { feature: "Advanced Analytics", cloudflow: true, competitor1: false, competitor2: false },
-  { feature: "Zero-code Workflows", cloudflow: true, competitor1: false, competitor2: true },
-  { feature: "Enterprise Security", cloudflow: true, competitor1: true, competitor2: true },
-  { feature: "24/7 Support", cloudflow: true, competitor1: false, competitor2: false },
-  { feature: "Custom Integrations", cloudflow: true, competitor1: false, competitor2: false },
-  { feature: "Mobile-first Design", cloudflow: true, competitor1: false, competitor2: true }
+  { feature: "Lightning-Fast POS", timber: true, competitor1: false, competitor2: true },
+  { feature: "Smart Inventory Management", timber: true, competitor1: true, competitor2: false },
+  { feature: "Customer Analytics", timber: true, competitor1: false, competitor2: false },
+  { feature: "Multi-Payment Support", timber: true, competitor1: false, competitor2: true },
+  { feature: "Real-time Reporting", timber: true, competitor1: true, competitor2: true },
+  { feature: "24/7 Support", timber: true, competitor1: false, competitor2: false },
+  { feature: "API Integrations", timber: true, competitor1: false, competitor2: false },
+  { feature: "Mobile POS", timber: true, competitor1: false, competitor2: true }
 ]
 
 export function FeaturesSection() {
@@ -58,12 +58,12 @@ export function FeaturesSection() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
-            Everything You Need to 
-            <span className="text-gradient"> Scale Your Business</span>
+            Industries We
+            <span className="text-gradient"> Serve</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            CloudFlow combines powerful automation, intelligent analytics, and seamless collaboration 
-            in one unified platform designed for modern teams.
+            Our solution is designed for multiple industries, providing specialized tools 
+            for each sector's unique needs.
           </p>
         </div>
 
@@ -107,7 +107,7 @@ export function FeaturesSection() {
               See How We Compare to the Competition
             </h3>
             <p className="text-muted-foreground">
-              Why leading companies choose CloudFlow over alternatives
+              Why leading businesses choose Timber POS over alternatives
             </p>
           </div>
 
@@ -117,7 +117,7 @@ export function FeaturesSection() {
                 <tr className="border-b border-border">
                   <th className="text-left py-4 px-2 font-semibold">Features</th>
                   <th className="text-center py-4 px-2">
-                    <div className="font-bold text-primary">CloudFlow</div>
+                    <div className="font-bold text-primary">Timber</div>
                     <div className="text-sm text-muted-foreground">Our Platform</div>
                   </th>
                   <th className="text-center py-4 px-2">
@@ -135,7 +135,7 @@ export function FeaturesSection() {
                   <tr key={index} className="border-b border-border/50">
                     <td className="py-4 px-2 font-medium">{row.feature}</td>
                     <td className="text-center py-4 px-2">
-                      {row.cloudflow ? (
+                      {row.timber ? (
                         <CheckCircle className="w-6 h-6 text-accent mx-auto" />
                       ) : (
                         <div className="w-6 h-6 bg-muted rounded-full mx-auto" />

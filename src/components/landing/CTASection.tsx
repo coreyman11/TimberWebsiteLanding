@@ -26,8 +26,8 @@ export function CTASection() {
             Ready to <span className="text-gradient">Transform</span> Your Business?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Join 50,000+ teams who have already revolutionized their workflows with CloudFlow. 
-            Start your free trial today and experience the future of work automation.
+            Join 10,000+ businesses who have already streamlined their operations with Timber POS. 
+            Start your free trial today and experience lightning-fast transactions.
           </p>
 
           {/* Email Capture Form */}
@@ -58,8 +58,8 @@ export function CTASection() {
                 <Users className="w-6 h-6 text-accent" />
               </div>
               <div className="text-left">
-                <div className="font-semibold">50,000+</div>
-                <div className="text-sm text-muted-foreground">Active Teams</div>
+                <div className="font-semibold">10,000+</div>
+                <div className="text-sm text-muted-foreground">Active Businesses</div>
               </div>
             </div>
             <div className="flex items-center justify-center space-x-3">
@@ -67,8 +67,8 @@ export function CTASection() {
                 <TrendingUp className="w-6 h-6 text-accent" />
               </div>
               <div className="text-left">
-                <div className="font-semibold">300%</div>
-                <div className="text-sm text-muted-foreground">Avg Productivity Boost</div>
+                <div className="font-semibold">67%</div>
+                <div className="text-sm text-muted-foreground">Faster Checkout</div>
               </div>
             </div>
             <div className="flex items-center justify-center space-x-3">
@@ -76,8 +76,8 @@ export function CTASection() {
                 <Zap className="w-6 h-6 text-accent" />
               </div>
               <div className="text-left">
-                <div className="font-semibold">99.9%</div>
-                <div className="text-sm text-muted-foreground">Uptime SLA</div>
+                <div className="font-semibold">3s</div>
+                <div className="text-sm text-muted-foreground">Transaction Speed</div>
               </div>
             </div>
           </div>
@@ -87,9 +87,9 @@ export function CTASection() {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Demo CTA */}
           <div className="bg-card border border-border rounded-2xl p-8 text-center">
-            <h3 className="text-2xl font-bold mb-4">See CloudFlow in Action</h3>
+            <h3 className="text-2xl font-bold mb-4">See Timber POS in Action</h3>
             <p className="text-muted-foreground mb-6">
-              Watch a personalized demo and discover how CloudFlow can transform your specific workflow challenges.
+              Watch a personalized demo and discover how Timber POS can streamline your business operations.
             </p>
             <Button variant="outline" size="lg" className="w-full">
               Schedule Live Demo
