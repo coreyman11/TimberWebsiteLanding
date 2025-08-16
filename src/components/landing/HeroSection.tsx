@@ -4,7 +4,7 @@ import heroImage from "@/assets/timber-hero-dashboard.png"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-0">
       {/* Gradient Background */}
       <div className="absolute inset-0 gradient-hero opacity-10" />
       
