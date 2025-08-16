@@ -85,7 +85,12 @@ export function CTASection() {
             <p className="text-muted-foreground mb-6">
               Watch a personalized demo and discover how Timber POS can streamline your business operations.
             </p>
-            <Button variant="outline" size="lg" className="w-full">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="w-full"
+              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Schedule Live Demo
             </Button>
             <div className="mt-4 flex items-center justify-center space-x-4 text-sm text-muted-foreground">

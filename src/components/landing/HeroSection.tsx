@@ -69,12 +69,13 @@ export function HeroSection() {
           </div>
 
           {/* Hero Image */}
-          <div className="relative animate-scale-in" style={{ animationDelay: '0.2s' }}>
+          <div className="relative animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <div className="relative">
               <img 
                 src={heroImage} 
                 alt="Timber POS Dashboard Interface" 
-                className="w-full h-auto rounded-2xl shadow-2xl border border-border"
+                className="w-full h-auto rounded-2xl shadow-2xl border border-border animate-scale-in" 
+                style={{ animationDelay: '0.6s' }}
               />
             </div>
           </div>
