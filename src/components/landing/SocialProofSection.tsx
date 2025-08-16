@@ -94,38 +94,6 @@ export function SocialProofSection() {
           ))}
         </div>
 
-        {/* Security & Compliance Badges */}
-        <div className="text-center">
-          <h3 className="text-lg font-semibold mb-6 text-muted-foreground">
-            Enterprise-Grade Security & Compliance
-          </h3>
-          <div className="flex items-center justify-center space-x-8 opacity-60">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-accent rounded flex items-center justify-center">
-                <span className="text-white text-xs font-bold">S</span>
-              </div>
-              <span className="text-sm font-medium">SOC 2 Type II</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-accent rounded flex items-center justify-center">
-                <span className="text-white text-xs font-bold">G</span>
-              </div>
-              <span className="text-sm font-medium">GDPR Compliant</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-accent rounded flex items-center justify-center">
-                <span className="text-white text-xs font-bold">I</span>
-              </div>
-              <span className="text-sm font-medium">ISO 27001</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-accent rounded flex items-center justify-center">
-                <span className="text-white text-xs font-bold">256</span>
-              </div>
-              <span className="text-sm font-medium">256-bit SSL</span>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   )
