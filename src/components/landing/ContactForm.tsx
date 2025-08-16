@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { Button } from "@/components/ui/enhanced-button"
 import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -7,33 +6,6 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 export function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    businessType: "",
-    phone: "",
-    description: ""
-  })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log("Contact form submitted:", formData)
-    // Handle form submission
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      businessType: "",
-      phone: "",
-      description: ""
-    })
-  }
-
-  const handleChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }))
-  }
-
   return (
     <section id="contact-form" className="py-24 bg-muted/30">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,14 +19,13 @@ export function ContactForm() {
         </div>
 
         <Card className="p-8">
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form action="https://formspree.io/f/xkgodqeq" method="POST" className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <Label htmlFor="name">Full Name *</Label>
                 <Input
                   id="name"
-                  value={formData.name}
-                  onChange={(e) => handleChange("name", e.target.value)}
+                  name="name"
                   placeholder="Enter your full name"
                   required
                 />
@@ -63,9 +34,8 @@ export function ContactForm() {
                 <Label htmlFor="email">Email Address *</Label>
                 <Input
                   id="email"
+                  name="email"
                   type="email"
-                  value={formData.email}
-                  onChange={(e) => handleChange("email", e.target.value)}
                   placeholder="Enter your email"
                   required
                 />
@@ -77,15 +47,14 @@ export function ContactForm() {
                 <Label htmlFor="company">Company Name *</Label>
                 <Input
                   id="company"
-                  value={formData.company}
-                  onChange={(e) => handleChange("company", e.target.value)}
+                  name="company"
                   placeholder="Enter your company name"
                   required
                 />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="businessType">Business Type *</Label>
-                <Select onValueChange={(value) => handleChange("businessType", value)} required>
+                <Select name="businessType" required>
                   <SelectTrigger>
                     <SelectValue placeholder="Select business type" />
                   </SelectTrigger>
@@ -106,9 +75,8 @@ export function ContactForm() {
               <Label htmlFor="phone">Phone Number</Label>
               <Input
                 id="phone"
+                name="phone"
                 type="tel"
-                value={formData.phone}
-                onChange={(e) => handleChange("phone", e.target.value)}
                 placeholder="Enter your phone number"
               />
             </div>
@@ -117,8 +85,7 @@ export function ContactForm() {
               <Label htmlFor="description">Tell us about your business *</Label>
               <Textarea
                 id="description"
-                value={formData.description}
-                onChange={(e) => handleChange("description", e.target.value)}
+                name="description"
                 placeholder="Describe your business needs, number of locations, current challenges, etc."
                 rows={4}
                 required
@@ -126,7 +93,7 @@ export function ContactForm() {
             </div>
 
             <Button type="submit" variant="hero" size="lg" className="w-full">
-              Submit Request
+              Submit
             </Button>
           </form>
         </Card>

@@ -19,13 +19,6 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="text-center lg:text-left animate-fade-up">
-            {/* Trust Badge */}
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-subtle border border-border mb-8">
-              <div className="w-2 h-2 bg-accent rounded-full mr-2" />
-              <span className="text-sm font-medium text-muted-foreground">
-                Trusted by Industry Leaders
-              </span>
-            </div>
 
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
@@ -83,20 +76,6 @@ export function HeroSection() {
                 alt="Timber POS Dashboard Interface" 
                 className="w-full h-auto rounded-2xl shadow-2xl border border-border"
               />
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-primary/20 to-secondary/20" />
-            </div>
-            
-            {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 bg-card border border-border rounded-xl p-4 shadow-lg animate-float">
-              <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-accent rounded-full" />
-                <span className="text-sm font-medium">Live Updates</span>
-              </div>
-            </div>
-            
-            <div className="absolute -bottom-4 -left-4 bg-card border border-border rounded-xl p-4 shadow-lg animate-float" style={{ animationDelay: '1s' }}>
-              <div className="text-sm font-medium text-primary">+23.4%</div>
-              <div className="text-xs text-muted-foreground">Efficiency Gain</div>
             </div>
           </div>
         </div>

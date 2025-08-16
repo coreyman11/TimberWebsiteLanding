@@ -62,38 +62,6 @@ export function SocialProofSection() {
           </div>
         </div>
 
-        {/* Customer Testimonials */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-card border border-border rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
-              {/* Rating */}
-              <div className="flex items-center mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-warning fill-current" />
-                ))}
-              </div>
-              
-              {/* Quote */}
-              <blockquote className="text-foreground mb-6 leading-relaxed">
-                "{testimonial.content}"
-              </blockquote>
-              
-              {/* Author */}
-              <div className="flex items-center">
-                <img 
-                  src={testimonial.avatar} 
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full mr-4"
-                />
-                <div>
-                  <div className="font-semibold text-foreground">{testimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                  <div className="text-sm text-primary font-medium">{testimonial.company}</div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
 
       </div>
     </section>
