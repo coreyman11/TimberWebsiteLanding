@@ -27,35 +27,36 @@ const testimonials = [
   }
 ]
 
-const companies = [
-  { name: "Urban Retail", logo: "UR" },
-  { name: "Bistro Verde", logo: "BV" },
-  { name: "Luxe Beauty", logo: "LB" },
-  { name: "FastMart", logo: "FM" },
-  { name: "Café Central", logo: "CC" },
-  { name: "StyleCut", logo: "SC" }
+const industries = [
+  { name: "Retail Stores", icon: "🏪" },
+  { name: "Restaurants", icon: "🍽️" },
+  { name: "Salons & Spas", icon: "💇" },
+  { name: "Coffee Shops", icon: "☕" },
+  { name: "Boutiques", icon: "👗" },
+  { name: "Bakeries", icon: "🧁" }
 ]
 
 export function SocialProofSection() {
   return (
     <section className="py-24 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Trust Indicators */}
+        {/* Industries We Serve */}
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">
-            Trusted by Industry Leaders
+            Industries We Serve
           </h2>
           <p className="text-xl text-muted-foreground mb-12">
-            Join thousands of businesses already streamlining their operations
+            Lightning-fast POS, smart analytics, and automated operations.
           </p>
           
-          {/* Company Logos */}
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center justify-items-center opacity-60">
-            {companies.map((company, index) => (
-              <div key={index} className="flex items-center justify-center">
-                <div className="w-12 h-12 bg-subtle rounded-lg flex items-center justify-center border border-border">
-                  <span className="font-bold text-sm text-muted-foreground">{company.logo}</span>
+          {/* Industry Icons */}
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center justify-items-center">
+            {industries.map((industry, index) => (
+              <div key={index} className="flex flex-col items-center">
+                <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-3 border border-border/50">
+                  <span className="text-2xl">{industry.icon}</span>
                 </div>
+                <span className="text-sm font-medium text-muted-foreground text-center">{industry.name}</span>
               </div>
             ))}
           </div>

@@ -58,12 +58,10 @@ export function FeaturesSection() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
-            Industries We
-            <span className="text-gradient"> Serve</span>
+            <span className="text-gradient">SUPERCHARGE YOUR POS</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our solution is designed for multiple industries, providing specialized tools 
-            for each sector's unique needs.
+            One platform that replaces all your business software
           </p>
         </div>
 
@@ -100,74 +98,6 @@ export function FeaturesSection() {
           ))}
         </div>
 
-        {/* Comparison Table */}
-        <div className="bg-card border border-border rounded-2xl p-8">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold mb-4">
-              See How We Compare to the Competition
-            </h3>
-            <p className="text-muted-foreground">
-              Why leading businesses choose Timber POS over alternatives
-            </p>
-          </div>
-
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead>
-                <tr className="border-b border-border">
-                  <th className="text-left py-4 px-2 font-semibold">Features</th>
-                  <th className="text-center py-4 px-2">
-                    <div className="font-bold text-primary">Timber</div>
-                    <div className="text-sm text-muted-foreground">Our Platform</div>
-                  </th>
-                  <th className="text-center py-4 px-2">
-                    <div className="font-semibold">Competitor A</div>
-                    <div className="text-sm text-muted-foreground">Traditional Tool</div>
-                  </th>
-                  <th className="text-center py-4 px-2">
-                    <div className="font-semibold">Competitor B</div>
-                    <div className="text-sm text-muted-foreground">Legacy Platform</div>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparisonFeatures.map((row, index) => (
-                  <tr key={index} className="border-b border-border/50">
-                    <td className="py-4 px-2 font-medium">{row.feature}</td>
-                    <td className="text-center py-4 px-2">
-                      {row.timber ? (
-                        <CheckCircle className="w-6 h-6 text-accent mx-auto" />
-                      ) : (
-                        <div className="w-6 h-6 bg-muted rounded-full mx-auto" />
-                      )}
-                    </td>
-                    <td className="text-center py-4 px-2">
-                      {row.competitor1 ? (
-                        <CheckCircle className="w-6 h-6 text-muted-foreground mx-auto" />
-                      ) : (
-                        <div className="w-6 h-6 bg-muted rounded-full mx-auto" />
-                      )}
-                    </td>
-                    <td className="text-center py-4 px-2">
-                      {row.competitor2 ? (
-                        <CheckCircle className="w-6 h-6 text-muted-foreground mx-auto" />
-                      ) : (
-                        <div className="w-6 h-6 bg-muted rounded-full mx-auto" />
-                      )}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          <div className="text-center mt-8">
-            <Button variant="cta" size="lg" className="group">
-              Start Your Free Trial
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </div>
-        </div>
       </div>
     </section>
   )
