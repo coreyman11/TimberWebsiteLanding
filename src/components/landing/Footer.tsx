@@ -4,31 +4,12 @@ import { Button } from "@/components/ui/enhanced-button"
 const footerLinks = {
   product: [
     { name: "Features", href: "#features" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "Integrations", href: "#integrations" },
-    { name: "API", href: "#api" },
-    { name: "Security", href: "#security" }
+    { name: "Pricing", href: "#pricing" }
   ],
   company: [
-    { name: "About", href: "#about" },
-    { name: "Blog", href: "#blog" },
-    { name: "Careers", href: "#careers" },
-    { name: "Press", href: "#press" },
+    { name: "About", href: "/about" },
+    { name: "Blog", href: "/blog" },
     { name: "Contact", href: "#contact" }
-  ],
-  resources: [
-    { name: "Documentation", href: "#docs" },
-    { name: "Help Center", href: "#help" },
-    { name: "Webinars", href: "#webinars" },
-    { name: "Case Studies", href: "#cases" },
-    { name: "Templates", href: "#templates" }
-  ],
-  legal: [
-    { name: "Privacy Policy", href: "#privacy" },
-    { name: "Terms of Service", href: "#terms" },
-    { name: "Cookie Policy", href: "#cookies" },
-    { name: "GDPR", href: "#gdpr" },
-    { name: "Security", href: "#security" }
   ]
 }
 
@@ -39,7 +20,7 @@ export function Footer() {
 
         {/* Main Footer */}
         <div className="py-16">
-          <div className="grid lg:grid-cols-6 gap-8">
+          <div className="grid lg:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="lg:col-span-2">
               <div className="mb-6">
@@ -68,32 +49,6 @@ export function Footer() {
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-3">
                 {footerLinks.company.map((link) => (
-                  <li key={link.name}>
-                    <a href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Resources</h4>
-              <ul className="space-y-3">
-                {footerLinks.resources.map((link) => (
-                  <li key={link.name}>
-                    <a href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Legal</h4>
-              <ul className="space-y-3">
-                {footerLinks.legal.map((link) => (
                   <li key={link.name}>
                     <a href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                       {link.name}
