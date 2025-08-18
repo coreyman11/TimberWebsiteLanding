@@ -74,7 +74,7 @@ export function HeroSection() {
               <img 
                 src={heroImage} 
                 alt="Timber POS Dashboard Interface" 
-                className="w-full h-auto rounded-2xl shadow-2xl border border-border animate-scale-in animate-bounce-subtle" 
+                className="w-full h-auto rounded-2xl shadow-2xl border border-border animate-scale-in animate-float-gentle" 
                 style={{ animationDelay: '0.6s' }}
               />
             </div>

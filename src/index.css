@@ -161,6 +161,10 @@
     animation: bounce-subtle 2s ease-in-out infinite;
   }
   
+  .animate-float-gentle {
+    animation: float-gentle 3s ease-in-out infinite;
+  }
+  
   /* Scroll Reveal */
   .reveal {
     opacity: 0;
@@ -212,6 +216,15 @@
     }
     60% {
       transform: translateY(-4px);
+    }
+  }
+  
+  @keyframes float-gentle {
+    0%, 100% { 
+      transform: translateY(0px); 
+    }
+    50% { 
+      transform: translateY(-6px); 
     }
   }
   
