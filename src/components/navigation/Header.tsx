@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
-import timberLogo from "@/assets/timber-logo.png"
+import wolfLogo from "@/assets/wolf-logo.png"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -18,8 +18,8 @@ export function Header() {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <img 
-              src={timberLogo} 
-              alt="Timber Logo" 
+              src={wolfLogo} 
+              alt="Wolf Logo" 
               className="h-8 w-8"
             />
             <span className="text-sm text-muted-foreground font-medium">
