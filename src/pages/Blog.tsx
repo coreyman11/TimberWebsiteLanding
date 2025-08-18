@@ -3,6 +3,7 @@ import { Footer } from "@/components/landing/Footer"
 import { Button } from "@/components/ui/enhanced-button"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Calendar, Clock, User } from "lucide-react"
+import { Link } from "react-router-dom"
 
 const Blog = () => {
   const featuredPost = {
@@ -117,8 +118,10 @@ const Blog = () => {
                   </div>
                 </div>
                 <Button variant="default" className="w-fit group">
-                  Read Full Article
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <Link to="/blog/digital-wallet-trends" className="flex items-center gap-2">
+                    Read Full Article
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -148,7 +151,88 @@ const Blog = () => {
       <section className="pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post, index) => (
+            <Link to="/blog/payment-processing-guide" className="bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all duration-300 group cursor-pointer">
+              <article>
+                <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10"></div>
+                <div className="p-6">
+                  <Badge variant="outline" className="mb-3">Payments</Badge>
+                  <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors leading-tight">
+                    The Complete Guide to Payment Processing
+                  </h3>
+                  <p className="text-muted-foreground mb-4 text-sm leading-relaxed">Everything you need to know about accepting payments in 2024, from mobile wallets to crypto.</p>
+                  <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                    <div className="flex items-center gap-1">
+                      <User className="h-3 w-3" />
+                      Alex Thompson
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Calendar className="h-3 w-3" />
+                      March 3, 2024
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Clock className="h-3 w-3" />
+                      9 min read
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </Link>
+            
+            <Link to="/blog/fraud-prevention" className="bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all duration-300 group cursor-pointer">
+              <article>
+                <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10"></div>
+                <div className="p-6">
+                  <Badge variant="outline" className="mb-3">Security</Badge>
+                  <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors leading-tight">
+                    Advanced Fraud Prevention Strategies
+                  </h3>
+                  <p className="text-muted-foreground mb-4 text-sm leading-relaxed">Comprehensive strategies to protect your business from payment fraud while maintaining excellent customer experience.</p>
+                  <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                    <div className="flex items-center gap-1">
+                      <User className="h-3 w-3" />
+                      Sarah Chen
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Calendar className="h-3 w-3" />
+                      March 18, 2024
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Clock className="h-3 w-3" />
+                      12 min read
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </Link>
+            
+            <Link to="/blog/digital-wallet-trends" className="bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all duration-300 group cursor-pointer">
+              <article>
+                <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10"></div>
+                <div className="p-6">
+                  <Badge variant="outline" className="mb-3">Technology</Badge>
+                  <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors leading-tight">
+                    Digital Wallet Trends: The Future of Payments
+                  </h3>
+                  <p className="text-muted-foreground mb-4 text-sm leading-relaxed">Explore the latest trends in digital wallet technology and how businesses can leverage mobile payments.</p>
+                  <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                    <div className="flex items-center gap-1">
+                      <User className="h-3 w-3" />
+                      Emily Watson
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Calendar className="h-3 w-3" />
+                      March 15, 2024
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Clock className="h-3 w-3" />
+                      10 min read
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </Link>
+            
+            {blogPosts.slice(3).map((post, index) => (
               <article key={index} className="bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all duration-300 group cursor-pointer">
                 <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10"></div>
                 <div className="p-6">
