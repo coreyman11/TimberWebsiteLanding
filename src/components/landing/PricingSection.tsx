@@ -1,10 +1,12 @@
 import { Check, Star, Zap } from "lucide-react"
 import { Button } from "@/components/ui/enhanced-button"
+import { useState } from "react"
 
 const plans = [
   {
     name: "Starter",
-    price: 29,
+    monthlyPrice: 29,
+    annualPrice: 23, // 20% discount
     description: "Perfect for small businesses getting started with POS",
     features: [
       "Up to 3 terminals",
@@ -23,7 +25,8 @@ const plans = [
   },
   {
     name: "Professional",
-    price: 79,
+    monthlyPrice: 79,
+    annualPrice: 63, // 20% discount
     description: "Ideal for growing businesses that need advanced POS features",
     features: [
       "Up to 10 terminals",
@@ -42,7 +45,8 @@ const plans = [
   },
   {
     name: "Enterprise",
-    price: null,
+    monthlyPrice: null,
+    annualPrice: null,
     description: "Custom solutions for enterprise retail chains and franchises",
     features: [
       "Unlimited terminals",
@@ -63,6 +67,8 @@ const plans = [
 ]
 
 export function PricingSection() {
+  const [isAnnual, setIsAnnual] = useState(false)
+
   return (
     <section className="py-24 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -78,13 +84,29 @@ export function PricingSection() {
           
           {/* Pricing Toggle */}
           <div className="inline-flex items-center bg-card border border-border rounded-lg p-1">
-            <button className="px-4 py-2 rounded-md text-sm font-medium bg-primary text-primary-foreground">
+            <button 
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                !isAnnual 
+                  ? 'bg-primary text-primary-foreground shadow-sm' 
+                  : 'text-muted-foreground hover:text-foreground'
+              }`}
+              onClick={() => setIsAnnual(false)}
+            >
               Monthly
             </button>
-            <button className="px-4 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground">
+            <button 
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                isAnnual 
+                  ? 'bg-primary text-primary-foreground shadow-sm' 
+                  : 'text-muted-foreground hover:text-foreground'
+              }`}
+              onClick={() => setIsAnnual(true)}
+            >
               Annual
             </button>
-            <div className="ml-2 px-3 py-1 bg-accent text-accent-foreground text-xs font-semibold rounded-full">
+            <div className={`ml-2 px-3 py-1 bg-accent text-accent-foreground text-xs font-semibold rounded-full transition-opacity duration-200 ${
+              isAnnual ? 'opacity-100' : 'opacity-60'
+            }`}>
               Save 20%
             </div>
           </div>
@@ -92,83 +114,105 @@ export function PricingSection() {
 
         {/* Pricing Cards */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
-          {plans.map((plan, index) => (
-            <div 
-              key={index} 
-              className={`relative bg-card border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 ${
-                plan.popular 
-                  ? 'border-primary shadow-lg scale-105 ring-2 ring-primary/20' 
-                  : 'border-border hover:border-primary/50'
-              }`}
-            >
-              {/* Popular Badge */}
-              {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="flex items-center space-x-1 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium">
-                    <Star className="w-4 h-4" />
-                    <span>Most Popular</span>
-                  </div>
-                </div>
-              )}
-
-              {/* Plan Header */}
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                <p className="text-muted-foreground mb-4">{plan.description}</p>
-                <div className="mb-4">
-                  {plan.price ? (
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-5xl font-bold">${plan.price}</span>
-                      <span className="text-muted-foreground ml-2">/month</span>
+          {plans.map((plan, index) => {
+            const currentPrice = isAnnual ? plan.annualPrice : plan.monthlyPrice
+            const originalPrice = isAnnual ? plan.monthlyPrice : null
+            
+            return (
+              <div 
+                key={index} 
+                className={`relative bg-card border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 ${
+                  plan.popular 
+                    ? 'border-primary shadow-lg scale-105 ring-2 ring-primary/20' 
+                    : 'border-border hover:border-primary/50'
+                }`}
+              >
+                {/* Popular Badge */}
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="flex items-center space-x-1 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium">
+                      <Star className="w-4 h-4" />
+                      <span>Most Popular</span>
                     </div>
-                  ) : (
-                    <div className="text-3xl font-bold">Custom</div>
-                  )}
-                </div>
-                <Button 
-                  variant={plan.popular ? "hero" : "outline"} 
-                  size="lg" 
-                  className="w-full"
-                  onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  {plan.cta}
-                </Button>
-              </div>
+                  </div>
+                )}
 
-              {/* Features */}
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold mb-3 text-sm uppercase tracking-wide text-muted-foreground">
-                    What's Included
-                  </h4>
-                  <ul className="space-y-3">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start">
-                        <Check className="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                {/* Plan Header */}
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                  <p className="text-muted-foreground mb-4">{plan.description}</p>
+                  <div className="mb-4">
+                    {currentPrice ? (
+                      <div className="flex flex-col items-center">
+                        <div className="flex items-baseline justify-center">
+                          <span className="text-5xl font-bold">${currentPrice}</span>
+                          <span className="text-muted-foreground ml-2">/{isAnnual ? 'month' : 'month'}</span>
+                        </div>
+                        {isAnnual && originalPrice && (
+                          <div className="flex items-center mt-2">
+                            <span className="text-sm text-muted-foreground line-through mr-2">
+                              ${originalPrice}/month
+                            </span>
+                            <span className="text-sm text-accent font-medium">
+                              Save ${(originalPrice - currentPrice) * 12}/year
+                            </span>
+                          </div>
+                        )}
+                        {isAnnual && (
+                          <div className="text-xs text-muted-foreground mt-1">
+                            Billed annually (${currentPrice * 12}/year)
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <div className="text-3xl font-bold">Custom</div>
+                    )}
+                  </div>
+                  <Button 
+                    variant={plan.popular ? "hero" : "outline"} 
+                    size="lg" 
+                    className="w-full"
+                    onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
+                    {plan.cta}
+                  </Button>
                 </div>
 
-                {/* Limitations */}
-                {plan.limitations.length > 0 && (
-                  <div className="pt-4 border-t border-border">
+                {/* Features */}
+                <div className="space-y-4">
+                  <div>
                     <h4 className="font-semibold mb-3 text-sm uppercase tracking-wide text-muted-foreground">
-                      Limitations
+                      What's Included
                     </h4>
-                    <ul className="space-y-2">
-                      {plan.limitations.map((limitation, limitIndex) => (
-                        <li key={limitIndex} className="text-sm text-muted-foreground">
-                          • {limitation}
+                    <ul className="space-y-3">
+                      {plan.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-start">
+                          <Check className="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
+                          <span className="text-sm">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
-                )}
+
+                  {/* Limitations */}
+                  {plan.limitations.length > 0 && (
+                    <div className="pt-4 border-t border-border">
+                      <h4 className="font-semibold mb-3 text-sm uppercase tracking-wide text-muted-foreground">
+                        Limitations
+                      </h4>
+                      <ul className="space-y-2">
+                        {plan.limitations.map((limitation, limitIndex) => (
+                          <li key={limitIndex} className="text-sm text-muted-foreground">
+                            • {limitation}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
         {/* FAQ Section */}

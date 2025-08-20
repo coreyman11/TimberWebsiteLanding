@@ -70,20 +70,20 @@ export const BlogPost = ({ title, content, author, date, readTime, category, exc
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold mb-8">Related Articles</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link to="/blog/ai-inventory-management" className="group">
+            <Link to="/blog/payment-processing-guide" className="group">
               <div className="bg-background rounded-xl border border-border p-6 hover:shadow-lg transition-all duration-300">
-                <Badge variant="outline" className="mb-3">Technology</Badge>
+                <Badge variant="outline" className="mb-3">Guide</Badge>
                 <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
-                  How AI is Revolutionizing Inventory Management
+                  The Complete Guide to Payment Processing
                 </h3>
-                <p className="text-sm text-muted-foreground">Learn how artificial intelligence is helping retailers optimize stock levels...</p>
+                <p className="text-sm text-muted-foreground">Everything you need to know about modern payment systems...</p>
               </div>
             </Link>
-            <Link to="/blog/pos-security-guide" className="group">
+            <Link to="/blog/fraud-prevention" className="group">
               <div className="bg-background rounded-xl border border-border p-6 hover:shadow-lg transition-all duration-300">
                 <Badge variant="outline" className="mb-3">Security</Badge>
                 <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
-                  POS Security Best Practices for Small Business
+                  Advanced Fraud Prevention Strategies
                 </h3>
                 <p className="text-sm text-muted-foreground">Essential security measures every business owner should implement...</p>
               </div>
