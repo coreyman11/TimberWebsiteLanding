@@ -18,7 +18,7 @@ export function Header() {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <img 
-              src={wolfLogo} 
+              src="https://i.ibb.co/m5B5P3Kc/wolf-logo.png" 
               alt="Wolf Logo" 
               className="h-8 w-8"
             />
